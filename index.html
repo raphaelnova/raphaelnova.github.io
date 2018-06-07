@@ -2,14 +2,48 @@
 <html lang="en">
   <head>
     <meta charset='utf-8'>
-    <title>the rain never stops</title>
-    <link href="css/main.css" media="all" rel="stylesheet" type="text/css" />
+    <title>Test #1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+    <script type="text/javascript" src="js/breathing-halftone.pkgd.js"></script>
   </head>
   <body>
-    <div id="f36eb40">
-      <section id="ac6876b">
-        <h1 id="no-promises">Don't hold your breath</h1>
-      </section>
+    <div id="container">
+      <div id="portrait"><img src="img/self.jpeg" data-src="img/self-dots.jpeg"></div>
+      <div id="intro">
+        <h1>Hi there!</h1>
+        <p>I'm <span id="fullname">Raphael Nova</span>, a brazilian application developer currently working for IBM. I specialize in writing distributed applications using <abbr title="Services Oriented Architecture">SOA</abbr> and Server/Client architecture, mostly for the web. Java and Ruby are the languages I'm more proficient at, but I also use Haskell in my spare time. I like the web, and I want to make it a safer place.</p>
+        <p>I'm based in Campinas, São Paulo.</p>
+        <nav>
+          <a class="fas fa-envelope-square" href="mailto:contact@raphaelnova.info"></a>
+          <a class="fab fa-linkedin" href="https://www.linkedin.com/in/raphaelnova"></a>
+          <a class="fab fa-github-square" href="https://github.com/raphaelnova"></a>
+        </nav>
+      </div>
     </div>
+    <script type="text/javascript">
+      //*
+      var img = document.querySelector('#portrait img');
+      new BreathingHalftone(img, {
+        dotSize: 1/80,
+        dotSizeThreshold: 0.1,
+        initVelocity: 1,
+        oscPeriod: 3,
+        oscAmplitude: 0.1,
+
+        isAdditive: true,
+        isRadial: false,
+        channels: [ 'lum' ],
+        isChannelLens: true,
+
+        friction: 0.2,
+        hoverDiameter: 0.5,
+        hoverForce: 0.0025,
+        activeDiameter: 0.6,
+        activeForce: -0.01
+      });
+      //*/
+    </script>
   </body>
 </html>
