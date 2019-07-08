@@ -46,10 +46,6 @@ abbr {
 	margin: 0.1em 0 0.2em 0;
 }
 
-#intro #fullname {
-	font-weight: bold;
-}
-
 #intro nav {
 	margin-top: 1.7em;
 }
@@ -65,3 +61,6 @@ abbr {
 	color: #38c;
 }
 
+.redacted {
+	color: black;
+}
